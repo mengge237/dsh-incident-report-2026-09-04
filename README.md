@@ -22,6 +22,21 @@ DeepSeek Harness 更新/恢复过程中「插件没装好、dsh web 无法启动
    `tool-bootstrap.mjs`）在每个回合开始时报 `Cannot read properties of undefined (reading 'length')`；同时 rc.1 需要 Node ≥ 24
    （`node:zlib` zstd / `node:module` type-stripping），Node 22 直接加载失败。
 
+## 配套过渡插件（想“先让它能跑起来”的人直接用）
+
+在官方修复合入前，发布了一个纯 server 的兼容垫片插件，装上即可缓解上述 ①②③：
+
+- 仓库：https://github.com/mengge237/dsh-legacy-compat
+- 一条命令安装（已验证：自动进 bundle 栈，无需 npm）：
+
+```bash
+dsh plugin --profile web add github:mengge237/dsh-legacy-compat
+# 完全重启 dsh web；Settings → Plugins 里可看到它
+```
+
+- 功能：坏会话日志启动自检/隔离（不删除）、Session.events 兼容别名、Node 预检；
+  默认安静，`DSH_LEGACY_COMPAT_VERBOSE=1` 看详情；带 `bin/uninstall.mjs` 一键卸载。
+
 ## 社区反馈位置
 
 - 官方 DeepSeek Harness Discussion: https://github.com/deepseek-ai/deepseek-harness/discussions/5655
