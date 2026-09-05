@@ -1,5 +1,8 @@
 # DSH Harness 0.1.2-rc.1 更新事故报告（2026-09-04）
 
+![lang](https://img.shields.io/badge/lang-docs-informational) ![status](https://img.shields.io/badge/status-archived-lightgrey)
+
+
 DeepSeek Harness 更新/恢复过程中「插件没装好、dsh web 无法启动、liangshen 预设会话全部报 Cannot read properties of undefined (reading 'length')」的完整复盘。
 
 **这是一份真实事故的根因分析 + 修复记录 + 给上游的改进建议，不含任何会话日志、凭据或隐私数据。**
@@ -44,4 +47,4 @@ dsh plugin --profile web add github:mengge237/dsh-legacy-compat
 
 ## 许可
 
-© 2026 mengge237 · 自由引用请注明出处。本仓库只包含分析与建议，不含用户数据。
+ 2026 mengge237 · 自由引用请注明出处。本仓库只包含分析与建议，不含用户数据。
