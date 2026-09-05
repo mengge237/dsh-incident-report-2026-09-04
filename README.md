@@ -47,4 +47,4 @@ dsh plugin --profile web add github:mengge237/dsh-legacy-compat
 
 ## 许可
 
- 2026 mengge237 · 自由引用请注明出处。本仓库只包含分析与建议，不含用户数据。
+© 2026 mengge237 · 自由引用请注明出处。本仓库只包含分析与建议，不含用户数据。
